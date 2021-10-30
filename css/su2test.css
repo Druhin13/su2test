@@ -1,6 +1,6 @@
 .body {
   overflow: visible;
-  background-color: #fef9f3;
+  background-color: #00060a;
   font-family: Helveticanowdisplay, sans-serif;
   font-size: 1vw;
   line-height: 1.25;
@@ -24,6 +24,7 @@
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+  background-color: #fef9f3;
 }
 
 .image-2 {
@@ -76,7 +77,7 @@
   justify-content: flex-end;
 }
 
-.menu-holder {
+.header {
   position: fixed;
   z-index: 100;
   display: -webkit-box;
@@ -84,9 +85,9 @@
   display: -ms-flexbox;
   display: flex;
   height: 10vh;
-  padding-right: 5.2vw;
+  padding-right: 5vw;
   padding-bottom: 1.5vh;
-  padding-left: 5.2vw;
+  padding-left: 5vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -100,14 +101,25 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fef9f3;
+  background-color: rgba(254, 249, 243, 0);
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
 }
 
-.image-3 {
+.header.active {
+  background-color: #fff;
+}
+
+.faq-img {
   position: static;
   width: 100vw;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.faq-img.disable-select {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 .button2 {
@@ -384,13 +396,15 @@
   padding-bottom: 15px;
 }
 
-.footer {
-  position: relative;
+.smooth-scroll-wrapper {
+  position: absolute;
+  z-index: 20;
+}
+
+.empty {
   z-index: 5;
-  width: 100vw;
-  height: auto;
-  padding-bottom: 8vh;
-  background-color: #101010;
+  width: 100%;
+  height: 57vh;
 }
 
 .inner-table-holder {
@@ -521,15 +535,28 @@
 }
 
 .footer-holder {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 5vw;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .footer-holder.end {
@@ -685,6 +712,7 @@
 
 .course-details {
   position: relative;
+  background-color: #fef9f3;
 }
 
 .image-4 {
@@ -708,7 +736,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 11.25vh 4vw 1.75vh;
+  padding: 1.75vh 4vw;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -770,6 +798,22 @@
   margin-top: 10vh;
 }
 
+.footer {
+  height: 56.5vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1920px) {
+  .empty {
+    height: 72vh;
+  }
+
+  .footer {
+    height: 100%;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .body {
     display: -webkit-box;
@@ -786,9 +830,10 @@
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    background-color: #fef9f3;
   }
 
-  .menu-holder {
+  .header {
     display: none;
   }
 
@@ -924,6 +969,7 @@
   }
 
   .footer-holder {
+    display: none;
     width: auto;
     margin-right: 4vw;
   }
@@ -1109,7 +1155,7 @@
     font-size: 11vw;
   }
 
-  .footer {
+  .empty {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
