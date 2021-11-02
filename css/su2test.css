@@ -58,6 +58,13 @@
   align-items: center;
 }
 
+.column.hero-illustration-2 {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
 .column-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -804,6 +811,69 @@
   object-fit: cover;
 }
 
+.hero-illustration-2 {
+  position: relative;
+  width: 50vw;
+  height: 100vh;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: 100% 100%;
+  object-position: 100% 100%;
+}
+
+.hero-illustration-2.disable-select {
+  width: 44.5vw;
+}
+
+.header-mobile {
+  position: fixed;
+  z-index: 100;
+  display: none;
+  height: 10vh;
+  padding-right: 5vw;
+  padding-bottom: 1.5vh;
+  padding-left: 5vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(254, 249, 243, 0);
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+.header-mobile.active {
+  background-color: #fff;
+}
+
+.mobile-menu {
+  position: relative;
+  z-index: 110;
+  margin-top: 3.25vh;
+}
+
+.tabs-mobile {
+  margin-top: 10vh;
+}
+
+.faq-mobile {
+  padding-top: 0vh;
+  background-color: #fff;
+}
+
+.mobile-only {
+  display: none;
+}
+
 @media screen and (min-width: 1920px) {
   .empty {
     height: 72vh;
@@ -1010,9 +1080,21 @@
   .not-available.mobile {
     display: none;
   }
+
+  .header-mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 479px) {
+  .body {
+    margin-top: 0vh;
+  }
+
+  .menu.disable-select {
+    display: none;
+  }
+
   .paragraph-text2 {
     font-size: 3.3vw;
     letter-spacing: -0.099vw;
@@ -1160,6 +1242,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    height: 85vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1269,6 +1352,7 @@
   }
 
   .not-available {
+    display: none;
     margin-right: 5vw;
   }
 
@@ -1282,6 +1366,202 @@
     font-size: 3.5vh;
     line-height: 1;
     letter-spacing: -0.175vw;
+  }
+
+  .cd-holder {
+    position: relative;
+    z-index: 5;
+  }
+
+  .cd-holder.key-details-mobile {
+    position: relative;
+    z-index: 5;
+    padding-top: 2vh;
+  }
+
+  .tabs-menu {
+    top: 8vh;
+    width: 100%;
+    margin-top: 2vh;
+    padding: 0vh 5vw 1vh;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .tab-link-tab-1.w--current {
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+
+  .tab-link-tab-2 {
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+
+  .tab-link-tab-3 {
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+
+  .tab-link-tab-4 {
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+
+  .text-block-4 {
+    font-size: 3.5vw;
+  }
+
+  .cd.disable-select {
+    padding-top: 0vh;
+    padding-right: 0vw;
+    padding-left: 0vw;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .cd.disable-select.no-radius {
+    padding-top: 0vh;
+    border-radius: 0px;
+  }
+
+  .header-mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 8vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .mobile-menu.disable-select {
+    margin-top: 2vh;
+  }
+
+  .mobile-hero-section {
+    position: relative;
+    z-index: 5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fef9f3;
+  }
+
+  .mobile-cta {
+    position: fixed;
+    left: 0%;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    z-index: 200;
+    display: block;
+  }
+
+  .image-5 {
+    width: 88vw;
+    margin-bottom: 2.5vh;
+  }
+
+  .hero-mobile-heading {
+    width: 100%;
+  }
+
+  .div-block-8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .tabs-mobile {
+    margin-top: 0vh;
+    background-color: #fff;
+  }
+
+  .text-block-5 {
+    font-size: 3.5vw;
+  }
+
+  .text-block-6 {
+    font-size: 3.5vw;
+  }
+
+  .text-block-7 {
+    font-size: 3.5vw;
+  }
+
+  .section {
+    position: relative;
+    z-index: 5;
+  }
+
+  .faq-mobile {
+    position: relative;
+    z-index: 5;
+    background-color: hsla(0, 0%, 100%, 0);
+  }
+
+  .mobile-footer-holder {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    z-index: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #00060a;
+  }
+
+  .mobile-only {
+    display: block;
   }
 }
 
